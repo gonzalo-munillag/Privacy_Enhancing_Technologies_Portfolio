@@ -5,7 +5,7 @@ You can also do it :), it is free! Here is the [link](https://courses.openmined.
 
 | Course | workload |
 |:-------|:-------|
-|[**Our privacy opportunity**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Our_Privacy_Opportunity/1_Society_runs_on_information_flows)| +7h |
+|[**Our privacy opportunity**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Our_Privacy_Opportunity)| +7h |
 
 ## Notes on the course intro [video](https://www.youtube.com/watch?v=ZdfpXIyY9iY&feature=youtu.be)
 
