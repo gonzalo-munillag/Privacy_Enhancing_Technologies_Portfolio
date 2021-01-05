@@ -2,11 +2,11 @@
 
 ## Goals 
 
-1. Learn about the Copy Problem
+1. Learn about the Copy Problem  
 Once you share your data, you stop having control over it, it can be further copied and transferred to yet other third parties. 
-2. Learn about the Bundling Problem
+2. Learn about the Bundling Problem  
 To verify information, you sometimes need extra information, which could be potentially avoided. 
-3. Learn about the Recursive Enforcement Problem 
+3. Learn about the Recursive Enforcement Problem    
 If there is an authority, who is the authority of the authority? 
 
 ## #1 The copy problem
