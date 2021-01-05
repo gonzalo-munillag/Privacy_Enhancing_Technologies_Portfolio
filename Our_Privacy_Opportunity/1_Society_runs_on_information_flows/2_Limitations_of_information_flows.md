@@ -1,10 +1,6 @@
 # Our Privacy Opportunity
 
-## Main takeaways
-
-There are three technical limitations of information flows (IFLows).
-
-## Goals of the course, including short summaries 
+## Goals 
 
 1. Learn about the Copy Problem
 Once you share your data, you stop having control over it, it can be further copied and transferred to yet other third parties. 
