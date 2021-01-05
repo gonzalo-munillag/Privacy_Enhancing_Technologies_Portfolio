@@ -4,7 +4,7 @@ This repositoty contains summaries, course projects, and my own thoughts from a 
 You can also do it :), it is free! Here is the [link](https://courses.openmined.org/).
 
 | Course | project | workload |
-|:-------|:-------|
+|:-------|:-------|:-------|
 |[**Our privacy opportunity**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Our_Privacy_Opportunity)| ... | +7h |
 
 ## Notes on the course intro [video](https://www.youtube.com/watch?v=ZdfpXIyY9iY&feature=youtu.be)
