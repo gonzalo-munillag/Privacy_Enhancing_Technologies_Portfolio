@@ -1,4 +1,4 @@
-# Our Privacy Opportunity
+# Society Runs on Information Flows
 
 ## Main takeaways
 
