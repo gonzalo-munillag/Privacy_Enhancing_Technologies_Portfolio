@@ -8,27 +8,29 @@ If you solve the copy problem, then data buyers no longer become the sellers com
 
 Privacy is not about hiding the identitiy of the person, a corporation might not need to know who that person is exactly, but know about the characteristics of this person so that it can target to him/her content with a larger scale malicious intent. 
 
-DP is not ready to achivee its full potential in an exisiting corporation, available tools are not enough to consider all aspects. Privacy budgeting is the main issue. While you protect with DP your customers, then if another company has the same customers, then we are closer to square one with linkage attacks than we would like to.
+DP is not ready to achieve its full potential in an exisiting corporation, available tools are not enough to consider all aspects. Privacy budgeting is the main issue. While you protect with DP your customers, then if another company has the same customers, thus we would be closer to square one with linkage attacks than we would like to.
 
 **Federated Data Network** with privacy budget tracking must be supported by institutions to keep track of the privacy loss of individuals accross organizations, experts do not think that these institutions will be private.
 
 The moment companies are able to analyse data in a privacy-preserving manner efficiently and accurately, then people and governments will start making regulation to make it mainstream. Companies should plan for this.
 
+**Sometimes it is not about making something the most private, the most efficient, the most scalable, but about replicating the IFlows for community wisdom that have already worked organically and apply structured transparency to those which are broken in certain ways.**
+
 Andre Trask - *Who owns the data? Whoever collected it first.*
 
 Problem of point 5 - you can sell the insights.
 
-The use cases are still far away from being in production.
+The use cases are still far away from being in production in my opinion.
 
 Process:
 
 1. Breakdown an existing IFlow in the context of structured transparency: IP, OP, IV, OV, and FG.
 2. Pick the weakest components and think how to solve them. 
 
-## Goals of the course, including short summaries 
+## Goals of the lesson, including short summaries 
 
-1. See the impact structured transparency could have on key groups and industries
-2. Get examples of how structured transparency could be used by key groups or industries
+1. See the impact structured transparency could have on specific groups and industries
+2. Get examples of how structured transparency could be used by specific groups or industries
 
 ## #1 Academic Research
 
@@ -85,7 +87,6 @@ An example of structured transparency is a journalist protecting his/her sources
 I cannot message someoone anonymously, in current apps, a phone number and a profile is associated with you. How could you however stay anonymous and prove at the same time that you work or belong to certain group?
 
 ## #5 ML startups and companies participating in data markets
-
 
 Motivation: raise money, users, brand, find talent, etc. But the key is, do you have the data? Chicken and an egg problem. You need a strategy to get access to data, which is usually done by consulting with a larger corporation, they then would get the data, and can start developing a product they can later sell.
 
