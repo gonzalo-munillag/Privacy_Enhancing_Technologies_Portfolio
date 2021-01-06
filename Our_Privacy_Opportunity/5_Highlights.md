@@ -57,10 +57,9 @@ There is a balance between privacy and transparency that must be accounted for i
 
 ### Definitions
 
-Process:
-
-    Breakdown an existing IFlow in the context of structured transparency: IP, OP, IV, OV, and FG.
-    Pick the weakest components and think how to solve them.
+Process:  
+1. Breakdown an existing IFlow in the context of structured transparency: IP, OP, IV, OV, and FG.
+2. Pick the weakest components and think how to solve them.
 
 
 What is contextual integrity?
@@ -70,10 +69,12 @@ Privacy and transparency are a Pareto trade-off, but with innovations, one may g
 
 Structured transparency framework: Breaks down a particular IFLow into the individual challenges that need to be addressed, then matches which of the many PETs may be applicable for the desirable IFlow. It is a high-level framework that allows one to map use cases with PETs without delving deep into the technology. ST's guarantees operate over an IFlow. The guarantees of ST are:
 
-    Input privacy (IP): Create IFlow between multiple parties while keeping the inputs secret.
-    Output privacy (OP): Allows to disperse outputs containing some information without accidentally revelaing other information that should be kept hidden, like the input or the sender of the input.
-    Input verification (IV): Allows you to verify the content, integrity and origin of an IFlow without revealing additional information. Possible to verify that an IFlow was constructed by specific holders of specific keys that we deem trustworthy. It can also be used to verify that transformations within the IFlow ocurred as it was suposed to.
-    Output verification (OV): Verifies attributes about what is happening to the hidden IFlow itself. Allows for properties of an IFlow to be verified without revealing the exact transformation happening within an IFlow.
-    Flow governance (FG): It is satisfied if each party with concern about how that information could be misuse, has the ability to prevnet an IFlow to be changed. All parties would need to agree to change the IFlow in that way. Sets rules so that nothing about the integrity about the other four components is compromised.
+Input privacy (IP): Create IFlow between multiple parties while keeping the inputs secret.  
+Output privacy (OP): Allows to disperse outputs containing some information without accidentally revelaing other information that should be kept hidden, like the input or the sender of the input.  
+Input verification (IV): Allows you to verify the content, integrity and origin of an IFlow without revealing additional information. Possible to verify that an IFlow was constructed by specific holders of specific keys that we deem trustworthy. It can also be used to verify that transformations within the IFlow ocurred as it was suposed to.  
+Output verification (OV): Verifies attributes about what is happening to the hidden IFlow itself. Allows for properties of an IFlow to be verified without revealing the exact transformation happening within an IFlow.  
+Flow governance (FG): It is satisfied if each party with concern about how that information could be misuse, has the ability to prevnet an IFlow to be changed. All parties would need to agree to change the IFlow in that way. Sets rules so that nothing about the integrity about the other four components is compromised.
 
-(1) and (2) guarantees refer to the information of the flow that needs to be hidden; solve the copy problem. (3) and (4) guarantees refer to the information of the flow that needs to be revealed in a verifiable way; solve the bundle problem. (5) dictates who is allowed to change the flow, including who can modify (1), (2), (3), and (4). It solves the recursive enforcement problem.
+(1) and (2) guarantees refer to the information of the flow that needs to be hidden; solve the copy problem.  
+(3) and (4) guarantees refer to the information of the flow that needs to be revealed in a verifiable way; solve the bundle problem.  
+(5) dictates who is allowed to change the flow, including who can modify (1), (2), (3), and (4). It solves the recursive enforcement problem.
