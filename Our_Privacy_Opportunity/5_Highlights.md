@@ -78,3 +78,9 @@ Flow governance (FG): It is satisfied if each party with concern about how that 
 (1) and (2) guarantees refer to the information of the flow that needs to be hidden; solve the copy problem.  
 (3) and (4) guarantees refer to the information of the flow that needs to be revealed in a verifiable way; solve the bundle problem.  
 (5) dictates who is allowed to change the flow, including who can modify (1), (2), (3), and (4). It solves the recursive enforcement problem.
+
+#### Mapping of components, problems and technologies.
+Input privacy solves the copy problem, via assymetric encryption, homomorphic encryption or secure multiparty computation.  
+Output priavcy solves the bundling problem, via differential privacy.
+Input verification solves the bundling problem, via HTTPS, active security added to HE and SMC, and zero knowledge proofs.  
+Distributed governance solves the recursive enforcement problem.
