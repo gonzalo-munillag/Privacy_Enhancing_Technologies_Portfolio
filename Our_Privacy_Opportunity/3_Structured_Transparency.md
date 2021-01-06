@@ -30,7 +30,7 @@ ST framework: Breaks down a particular IFLow into the individual challenges that
 1. Input privacy (IP): Create IFlow between multiple parties while keeping the inputs secret.
 2. Output privacy (OP): Allows to disperse outputs containing some information without accidentally revelaing other information that should be kept hidden, like the input or the sender of the input.
 3. Input verification (IV): Allows you to verify the content, integrity and origin of an IFlow without revealing additional information. Possible to verify that an IFlow was constructed by specific holders of specific keys that we deem trustworthy. It can also be used to verify that transformations within the IFlow ocurred as it was suposed to.
-4. Output verification (OV): Verifies attirbutes about what is happening to the hidden IFlow itself. Allows for properties of an IFlow to be verified without revealing the exact transformation happening within an IFlow.
+4. Output verification (OV): Verifies attributes about what is happening to the hidden IFlow itself. Allows for properties of an IFlow to be verified without revealing the exact transformation happening within an IFlow.
 5. Flow governance (FG): It is satisfied if each party with concern about how that information could be misuse, has the ability to prevnet an IFlow to be changed. All parties would need to agree to change the IFlow in that way. Sets rules so that nothing about the integrity about the other four components is compromised.
 
 (1) and (2) guarantees refer to the information of the flow that needs to be hidden; solve the copy problem.
