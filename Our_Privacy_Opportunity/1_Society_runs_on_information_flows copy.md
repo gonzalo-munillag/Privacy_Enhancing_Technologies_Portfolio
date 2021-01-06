@@ -4,7 +4,7 @@
 
 Create information flows within society, which in turn creates social good. Privacy is in service of this higher purpose, it is a subtopic. Privacy technology is not only about privacy, but it can also be used to prevent misinformation or inappropriate information flows. 
 
-The promise of privacy-enhancing technologies: How can society accomplish its goals with lower risk, higher accuracy, faster speed, more aligned incentives than better than before through better information flows? This must be answered by entrepreneurs and companies.
+The promise of privacy-enhancing technologies: How can society accomplish its goals with lower risk, higher accuracy, faster speed, more aligned incentives better than before through better information flows? This must be answered by entrepreneurs and companies.
 
 There is a balance between privacy and transparency that must be accounted for in the design of any appropriate information flow.
 
@@ -91,7 +91,7 @@ Yes, it could be. Because just because you can't identify an individual - if you
 
 ## The transparency dilemma
 
-**One is forced to decide without the information necessary to make it**
+**One is forced to decide without the information necessary to make a decision.**
 
 Locking down data completely would not make a better world (maximizing privacy), leads to a lack of transparency and therefore malicious endeavors may be hidden or the upside potential of e.g. research is curtailed.  
 Accountability is based on designing IFlows to hold someone accountable, bad actors are detected stopped, and avoided.  
