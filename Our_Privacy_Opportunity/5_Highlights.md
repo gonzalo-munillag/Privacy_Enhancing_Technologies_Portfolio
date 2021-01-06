@@ -2,7 +2,7 @@
 
 ## Insights
 
-I realized: PETs are tools that can make data scarce, thus, they are necessary for the future data economy.
+I realized: PETs are tools that also can make data scarce, thus, they are necessary for the future data economy. I.e., Copying data renders its value to almost 0, but PETs can also avoid the necessity for data to be copied while at the same time allowing others to extract value.
 
 The moment companies are able to analyse data in a privacy-preserving manner efficiently and accurately, then people and governments will start making regulations to make it mainstream. Companies should plan for this.
  
