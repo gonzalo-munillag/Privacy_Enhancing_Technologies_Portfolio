@@ -16,7 +16,7 @@ The moment companies are able to analyse data in a privacy-preserving manner eff
 
 **Sometimes it is not about making something the most private, the most efficient, the most scalable, but about replicating the IFlows for community wisdom that have already worked organically and apply structured transparency to those which are broken in certain ways.**
 
-Andre Trask - *Who owns the data? Whoever collected it first.*
+Andrew Trask - *Who owns the data? Whoever collected it first.*
 
 Problem of point 5 - you can sell the insights.
 
