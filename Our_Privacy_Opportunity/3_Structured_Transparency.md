@@ -10,7 +10,7 @@ Structured transparency (ST)
 
 ## Main takeaways
 
-Input privacy solves the copy problem, via assymetric encryption, homomorphic encryption or secure multiparty computation.  
+Input privacy solves the copy problem, via assymetric encryption, homomorphic encryption, secure multiparty computation, or DP.
 Output priavcy solves the bundling problem, via differential privacy.  
 Input verification solves the bundling problem, via HTTPS, active security added to HE and SMC, and zero knowledge proofs.  
 Distributed governance solves the recursive enforcement problem.  
