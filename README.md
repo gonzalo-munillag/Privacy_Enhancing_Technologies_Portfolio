@@ -5,7 +5,7 @@ You can also do it :), it is free! Here is the [link](https://courses.openmined.
 
 | Course | project | workload |
 |:-------|:-------|:-------|
-|[**Our privacy opportunity**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Our_Privacy_Opportunity)| ... | +25h |
+|[**Our privacy opportunity**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Our_Privacy_Opportunity)| [Privacy-preserving concepts for vehicles](https://github.com/gonzalo-munillag/Private_AI_OpenMined/blob/main/Our_Privacy_Opportunity/Project_Privacy_Product_Specification.md) | +25h |
 
 ## Notes on the course intro [video](https://www.youtube.com/watch?v=ZdfpXIyY9iY&feature=youtu.be)
 
