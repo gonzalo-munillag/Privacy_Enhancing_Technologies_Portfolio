@@ -9,25 +9,25 @@ Note to the reviewer: I think the word choice for this project is slightly wrong
 
 #### Acronyms
 
-PET - Privacy enhancing technology
-DP - Differential privacy
-HE - Homomorphic encryption
-SMC - Secure multiparty computation
-FL - Federated learning
-ML - Machine learning
-DP-SGD - Differentially private stochastic gradient descent (for deep learning (DL))
-PKC - Public key cryptography
-ZNP - Zero knowledge proofs
-TEE - Trusted execution envisonments, or secure enclaves
-BC - Blockchain
-ST - Structured Transparency
-IP - Input privacy
-OP - Output privacy
-IV - Input verification
-OV - Output verification
-FG - Flow governance
-IFLow - Information flow
-OEM - Original Equipment Manufacturer, in this project's context an automaker
+PET - Privacy enhancing technology  
+DP - Differential privacy  
+HE - Homomorphic encryption  
+SMC - Secure multiparty computation  
+FL - Federated learning  
+ML - Machine learning  
+DP-SGD - Differentially private stochastic gradient descent (for deep learning (DL))  
+PKC - Public key cryptography  
+ZNP - Zero knowledge proofs  
+TEE - Trusted execution envisonments, or secure enclaves  
+BC - Blockchain  
+ST - Structured Transparency  
+IP - Input privacy  
+OP - Output privacy  
+IV - Input verification  
+OV - Output verification  
+FG - Flow governance  
+IFLow - Information flow  
+OEM - Original Equipment Manufacturer, in this project's context an automaker  
 
 ## 1. Goal
 
