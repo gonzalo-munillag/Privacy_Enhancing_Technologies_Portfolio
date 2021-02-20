@@ -264,9 +264,11 @@ We have chosen three technologies to realize our concept (HE, FL, and DP), here 
 About HE:  
 Snippet from an [IBM blog post](https://www.ibm.com/blogs/research/2018/03/elegant-disgusting-cryptography/) of 2018: “Computing on encrypted data is probably still 10,000 times slower than standard computation today where the data is in the clear, but this is already acceptable for some niche applications, and we are making steady progress on speeding it up,” says Halevi.  
 
-About DP in the wild: [Apple](https://www.apple.com/privacy/docs/Differential_Privacy_Overview.pdf) uses DP in your phone. The epsilons are for me quite arbitrary, Apple does not provide any explanation about their value. But the cool thing is that you can actually go to your phone and find out. Go to Settings-Privacy-Analytics & Improvements (bottom) - Analytics data. Look for a file with the name differential privacy. Sometimes I find one, sometimes I do not, I guess it depends on what one uses and one's settings.
+About DP in the wild:  
+[Apple](https://www.apple.com/privacy/docs/Differential_Privacy_Overview.pdf) uses DP in your phone. The epsilons are for me quite arbitrary, Apple does not provide any explanation about their value. But the cool thing is that you can actually go to your phone and find out. Go to Settings-Privacy-Analytics & Improvements (bottom) - Analytics data. Look for a file with the name differential privacy. Sometimes I find one, sometimes I do not, I guess it depends on what one uses and one's settings.
 
-About FL: [Google](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html) is researching its application in phones, with promising results.
+About FL:  
+[Google](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html) is researching its application in phones, with promising results.
 
 In summary, as mentioned in this document. HE is still far from being production-ready, but we can already see FL and DP in the wild.
 
