@@ -2,11 +2,11 @@
 
 ## Insights
 
-I realized: PETs are tools that also can make data scarce, thus, they are necessary for the future data economy. I.e., we know copying  data renders its value to almost 0, but PETs can also avoid the necessity for data to be copied while at the same time allowing others to extract value.
+**I realized: PETs are tools that also can make data scarce, thus, they are necessary for the future data economy. I.e., we know copying  data renders its value to almost 0, but PETs can also avoid the necessity for data to be copied while at the same time allowing others to extract value.**
 
-The moment companies are able to analyse data in a privacy-preserving manner efficiently and accurately, then people and governments will start making regulations to make it mainstream. Companies should plan for this.
+**The moment companies are able to analyse data in a privacy-preserving manner efficiently and accurately, then people and governments will start making regulations to make it mainstream. Companies should plan for this.**
  
-Focusing on proprietary SW is a short term strategy for startups or companies as they will ultimately be replaced by open-source SW. Like it happened with ML. The long term defensible strategy is to become gatekeepers for the world's information within the forthcoming networks of data. While you only need a few packages for all of us to use, information flows are the things that companies and communities will need more of. It will not be about hoarding data either if that is not what the original data owners want. It is about creating and maintaining information flows so that people and other organizations achieve their goals in the best possible way.
+Focusing on proprietary SW is a short-term strategy for startups or companies as they will ultimately be replaced by open-source SW. Like it happened with ML; anyone can be a data scientist, ML is automated with all the libraries that exist. Even feature engineering can be replaced by a DL (Brute force). The long-term defensible strategy is to become gatekeepers for the world's information within the forthcoming networks of data. While you only need a few packages for all of us to use, information flows are the things that companies and communities will need more of. It will not be about hoarding data either if that is not what the original data owners want. It is about creating and maintaining information flows so that people and other organizations achieve their goals in the best possible way.
 
 Ilya Mironov, FacebookAI - SQL must be enhanced to be privacy-preserving, which is seriously tackled by multiple research teams of DP.
 
@@ -16,7 +16,7 @@ The expected market for healthcare AI is 36 billion dollars, yet only 30 algorit
 
 Techniques: privacy-preserving computing and confidential computing, validating algorithms without moving the data throughout pre-processing, annotation, and computation. The model weights are the IP of the product that an organization is using, so the algorithm must also be protected.
 
-Aaron Roth - Tooling around DP is limited. We are not at a place where you can easily use DP in-house. There are some open-source algorithms, but, what we do not have much of, is an end-to-end infrastructure to use DP. Privacy does not come for free, we must see privacy as a scarce resource, we must use epsilon to keep track of it, but there is nothing out there that can make it happen yet, perhaps a solution comes from Harvard and Microsoft. Once this is solved, then DP can be widely adopted and used by companies in-house without expertise.
+Aaron Roth - Tooling around DP is limited. We are not at a place where you can easily use DP in-house. **There are some open-source algorithms, but, what we do not have much of, is an end-to-end infrastructure to use DP.** Privacy does not come for free, we must see privacy as a scarce resource, we must use epsilon to keep track of it, but there is nothing out there that can make it happen yet, perhaps a solution comes from Harvard and Microsoft. Once this is solved, then DP can be widely adopted and used by companies in-house without expertise.
 
 Aaron Roth - Privacy budgets need to be personalized, but how do you keep track of all the institutions that have your data and thus do appropriate budget accounting?
 It sounds like sci-fi at the moment.
@@ -25,11 +25,11 @@ Cynthia Dwork - There is nothing other than politics for federating and maintain
 
 About analogies, data is more like [fire](https://ystrickler.medium.com/data-is-fire-92a110557ef8) than like crude oil.
 
-Lock-in effect= monopoly: Artificially increases scarcity, and therefore prices, and reduces the need to provide the service appropriately. 
+Lock-in effect = monopoly: Artificially increases scarcity, and therefore prices, and reduces the need to provide the service appropriately. 
 
 Interoperability avoids the lock-in effect. Competitive compatibility is a strategy to make a new business' application, to be compatible with a competitor's app. This is used to defeat centralization, it lowers the switching cost, switching in steps.
 
-Privacy is not about hiding the identity of the person, a corporation might not need to know who that person is exactly, but know about the characteristics of this a person so that it can target him/her content with a larger scale malicious intent.
+**Privacy is not about hiding the identity of the person, a corporation might not need to know who that person is exactly but know about the characteristics of this person so that it can target him/her content with a larger scale malicious intent.**
 
 Privacy is about user agency, it provides the user with the means to choose the right information flow.
 
