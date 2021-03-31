@@ -3,7 +3,7 @@
 This repositoty contains summaries, course projects, and my own thoughts from a course about Private AI, lead by [OpenMined](https://www.openmined.org/) and taught by many experts in the field. 
 You can also do it :), it is free! Here is the [link](https://courses.openmined.org/).
 
-| course Block | description | project | workload |
+| course | description | project | workload |
 |:-------|:-------|:-------|:-------|
 |[**Our privacy opportunity**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Our_Privacy_Opportunity)| High-level overview of PETs and use cases | [Privacy-preserving concepts for vehicles](https://github.com/gonzalo-munillag/Private_AI_OpenMined/blob/main/Our_Privacy_Opportunity/Project_Privacy_Product_Specification.md) | +25h |
 |[**Foundations of Private Computation**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Foundations_of_Private_Computation)| Deeper view and state of the art implementations of PETs | | +60h |
