@@ -4,16 +4,13 @@
 
 This is an example of symmetric encryption:
 
-![cipher](Images/cipher.png.png)
+![cipher](Images/cipher.png)
 
-**
-A cipher is an algorithm that allows to encode and decode information
-Encryption - Encoding
-Decryption - Decoding
-
-Encrypted message - ciphertext
-Not encrypted message - plaintext
-**
+**A cipher is an algorithm that allows to encode and decode information. 
+Encryption - Encoding  
+Decryption - Decoding    
+Encrypted message - ciphertext    
+Not encrypted message - plaintext**
 
 #### Simplest cipher: Shift cipher
 The Caesar's cipher was a shift cipher, it is a type of substitution cipher (Characters of a message are substituted by another),. The Caesar's cipher substitutes each letter of the message by a shift of 3 letters in the alphabet. 
