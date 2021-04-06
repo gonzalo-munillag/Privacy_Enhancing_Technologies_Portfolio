@@ -1,7 +1,7 @@
 # Foundations of Private Computation
 
 This repository contains code and notes form the lessons ahout federated lerning, split learning, homomorphic encryption, differential privacy, among others.
-Additionally, it contains the capstone project.
+Additionally, the last item of the Lesson list is the link to my capstone project. (Not yet, need to finish the course)
 
 | Lesson |
 |:-------|
