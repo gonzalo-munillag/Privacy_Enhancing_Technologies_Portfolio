@@ -7,3 +7,4 @@ Additionally, it contains the capstone project.
 |:-------|
 |[**Federated Learning**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Foundations_of_Private_Computation/Federated_Learning)|  
 |[**Split Learning**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Foundations_of_Private_Computation/Split_Learning)|  
+|[**Cryptographic cipher basics**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Foundations_of_Private_Computation/Cryptography_cipher_basics)|
