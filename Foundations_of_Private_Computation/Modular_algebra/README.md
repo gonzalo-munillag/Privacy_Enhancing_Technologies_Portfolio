@@ -34,7 +34,7 @@ When working with Groups, the notation used is additive (+, identitiy element = 
 This notation is used even when the elements of the group are not numerical, e.g., function compositions or geometric transformations.
 Do the effort to get away from just Real numbers. 
 
-![bijection_injection]{Images/bijection_injection.png}
+![bijection_injection](Images/bijection_injection.png)
 [Source](https://en.wikipedia.org/wiki/Injective_function)
 
 ## The group of the modulo sum operation - Groups with additive notation
@@ -108,13 +108,13 @@ There are missing elements. But 1 is a g of the group:
 
 Extra content ([Source](https://www.youtube.com/watch?v=8A84sA1YuPw))
 
-![additive]{Images/additive.png}
+![additive](Images/additive.png)
 
 ## The group of the modulo multiplication operation - Groups with multiplicative notation
 
 We can try to define a modulo group with the product operation instead of the sum. This algebraic group would be denoted as: (𝐺, ×) where 𝐺 again is the set of elements {0, 1, 2, ..., 𝑚-1} and × denoting the product operation
 
-![multiplicative]{Images/multiplicative.png}
+![multiplicative](Images/multiplicative.png)
 
 We also have the properties of closure, associativity, and the identity (e=1) and the inverse elements. 
 
@@ -195,9 +195,9 @@ If 𝑚 =𝑝, a prime number, then (𝐺, ×) is an  (commutative) a group.
 
 ## Groups, Rings, and Fields
 
-![summary]{Images/summary.png}
+![summary](Images/summary.png)
 
-![rings]{Images/rings.png}
+![rings](Images/rings.png)
 the group for the second operations does not have inverses (Top right square).
 
 A ring is an ordered triple, (𝑅,+,×), where 𝑅 is a set, +:𝑅×𝑅→𝑅 and ×:𝑅×𝑅→𝑅
@@ -215,7 +215,7 @@ are binary operations (usually written in in-fix notation) such that:
 1-4 tell us that (𝑅,+)
 is an abelian group. 5 tells us that (𝑅,×) is a semigroup. 
 
-![fields]{Images/Fields.png}
+![fields](Images/Fields.png)
 
 We also have the following items:
 
@@ -265,7 +265,7 @@ Even though we can’t predict primes with a formula we can calculate the probab
 (x) is exact calculation and we have to do it numerically. The prime number theorem establishes the asymptotic distribution of prime numbers by approximating the count to x/ln(x)
 Image
 
-![prime_number_density]{Images/prime_number_density.png}
+![prime_number_density](Images/prime_number_density.png)
 
 How can we calculate a list of primes that are smaller than 𝑛? We will use the **Sieve of Erathostenes**: build a list of all the natural numbers from 1 to n (n is the natural number below which you want all the primes) and remove all the multiples of the newly find prime.
 
