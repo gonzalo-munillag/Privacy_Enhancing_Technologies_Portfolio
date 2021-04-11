@@ -265,7 +265,7 @@ Even though we can’t predict primes with a formula we can calculate the probab
 (x) is exact calculation and we have to do it numerically. The prime number theorem establishes the asymptotic distribution of prime numbers by approximating the count to x/ln(x)
 Image
 
-![prime_number_density](Images/prime_number_density.png)
+![prime_number_density](Images/prime_number_density_2.png)
 
 How can we calculate a list of primes that are smaller than 𝑛? We will use the **Sieve of Erathostenes**: build a list of all the natural numbers from 1 to n (n is the natural number below which you want all the primes) and remove all the multiples of the newly find prime.
 
