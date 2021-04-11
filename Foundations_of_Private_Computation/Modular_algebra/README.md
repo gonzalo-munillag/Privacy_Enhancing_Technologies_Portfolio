@@ -34,7 +34,7 @@ When working with Groups, the notation used is additive (+, identitiy element = 
 This notation is used even when the elements of the group are not numerical, e.g., function compositions or geometric transformations.
 Do the effort to get away from just Real numbers. 
 
-\includegraphics[]{/Images/bijection_injection.png}
+\includegraphics[]{Images/bijection_injection.png}
 [Source](https://en.wikipedia.org/wiki/Injective_function)
 
 ## The group of the modulo sum operation - Groups with additive notation
