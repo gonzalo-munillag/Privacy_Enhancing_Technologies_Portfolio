@@ -14,9 +14,19 @@ Given two positive numbers a and n, a modulo n (abbreviated as a mod n) is the r
 
 ### Congruence   
 
+Great basics explanation [here](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/congruence-modulo)
+Before proceeding it’s important to remember the following statements are equivalent
+
+    A≡B (mod C) A \equiv B\ (\text{mod }C) A≡B (mod C)A, \equiv, B, space, left parenthesis, start text, m, o, d, space, end text, C, right parenthesis
+    A mod C=B mod C A \text{ mod } C = B \text{ mod }C A mod C=B mod CA, start text, space, m, o, d, space, end text, C, equals, B, start text, space, m, o, d, space, end text, C
+    C ∣ (A−B) C \ |\ (A - B) C ∣ (A−B)C, space, vertical bar, space, left parenthesis, A, minus, B, right parenthesis (The | symbol means divides, or is a factor of)
+    A=B+K⋅C A = B + K \cdot C A=B+K⋅CA, equals, B, plus, K, dot, C (where K K KK is some integer)
+    
+
+
 Given an integer n > 1, called a modulus, two integers are said to be congruent modulo n, if n is a divisor of their difference (i.e., if there is an integer k such that a − b = kn).
 
-Congruence modulo n is a congruence relation, meaning that it is an equivalence relation that is compatible with the operations of addition, subtraction, and multiplication. Congruence modulo n is denoted:
+Congruence modulo n is a congruence relation, meaning that it is an equivalence relation that is compatible with the operations of addition, subtraction, and multiplication. Congruence modulo n is denoted (a is confruent to b modulo n):
 
     a ≡ b ( mod n ) 
 
