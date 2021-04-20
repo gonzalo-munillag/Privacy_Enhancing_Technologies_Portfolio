@@ -91,9 +91,9 @@ Each element can be written as a power of g in multiplicative notation (Operatio
 
 Careful that this notation is not as in normal arithmetic.
 
-For m = 8
-E.g. 2 is not a generator of the group.     
-2^1=2
+For m = 8   
+E.g. 2 is not a generator of the group.      
+2^1=2  
 2^2=(2+2^1)\%8=4  
 2^3=(2+2^2)\%8=6  
 2^4=(2+2^3)\%8=0  
@@ -101,7 +101,7 @@ E.g. 2 is not a generator of the group.
 2^6=(2+2^5)\%8=4  
 2^7=(2+2^6)\%8=6    
 
-There are missing elements. But 1 is a g of the group:
+There are missing elements. But 1 is a g of the group:   
 1^1 = 1  
 1^2=2  
 1^3=3  
