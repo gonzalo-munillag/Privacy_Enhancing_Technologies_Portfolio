@@ -72,7 +72,7 @@ In these cases, e=0, it is the identity element.
 
 m - a = b
 7 - 3 = 4
-$(3+ 4)\%7 = e = 0$
+(3+ 4)\%7 = e = 0
 
 
 If additionally the operation is commutative ((a+b)\%m$=$(b+a)\%m) then we say that the group is **commutative** or **abelian**.
@@ -87,28 +87,28 @@ That is, it is a set of invertible elements with a single associative binary ope
 Each element can be written as a power of g in multiplicative notation (Operation is multiplicative), or as a multiple of g in additive notation (Operation is additive).  
 [Source](https://en.wikipedia.org/wiki/Cyclic_group)  
 
-𝐺={$𝑔^0,𝑔^1,...,𝑔^(𝑚−1)$}
+𝐺={𝑔^0,𝑔^1,...,𝑔^(𝑚−1)}
 
 Careful that this notation is not as in normal arithmetic.
 
 For m = 8
 E.g. 2 is not a generator of the group.     
 2^1=2
-2^2=(2+2^1)\%8=4
-2^3=(2+2^2)\%8=6
-2^4=(2+2^3)\%8=0
-2^5=(2+2^4)\%8=2
-2^6=(2+2^5)\%8=4
-2^7=(2+2^6)\%8=6  
+2^2=(2+2^1)\%8=4  
+2^3=(2+2^2)\%8=6  
+2^4=(2+2^3)\%8=0  
+2^5=(2+2^4)\%8=2  
+2^6=(2+2^5)\%8=4  
+2^7=(2+2^6)\%8=6    
 
 There are missing elements. But 1 is a g of the group:
-1^1 = 1
-1^2=2
-1^3=3
-1^4=4
-1^5=5
-1^6=6
-1^7=7
+1^1 = 1  
+1^2=2  
+1^3=3  
+1^4=4  
+1^5=5  
+1^6=6  
+1^7=7  
 
 Extra content ([Source](https://www.youtube.com/watch?v=8A84sA1YuPw))
 
