@@ -15,13 +15,7 @@ Given two positive numbers a and n, a modulo n (abbreviated as a mod n) is the r
 ### Congruence   
 
 Great basics explanation [here](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/congruence-modulo)
-Before proceeding it’s important to remember the following statements are equivalent
-
-    A≡B (mod C) A \equiv B\ (\text{mod }C) A≡B (mod C)A, \equiv, B, space, left parenthesis, start text, m, o, d, space, end text, C, right parenthesis
-    A mod C=B mod C A \text{ mod } C = B \text{ mod }C A mod C=B mod CA, start text, space, m, o, d, space, end text, C, equals, B, start text, space, m, o, d, space, end text, C
-    C ∣ (A−B) C \ |\ (A - B) C ∣ (A−B)C, space, vertical bar, space, left parenthesis, A, minus, B, right parenthesis (The | symbol means divides, or is a factor of)
-    A=B+K⋅C A = B + K \cdot C A=B+K⋅CA, equals, B, plus, K, dot, C (where K K KK is some integer)
-    
+ 
 
 
 Given an integer n > 1, called a modulus, two integers are said to be congruent modulo n, if n is a divisor of their difference (i.e., if there is an integer k such that a − b = kn).
@@ -51,9 +45,9 @@ Do the effort to get away from just Real numbers.
 
 Recall that for a fixed $m$ all the possible values are
 
-$G$ = {0, 1, 2, ..., $m$-1)
+G = {0, 1, 2, ..., m-1)
 
-The elements with the modulo sum operation constitutes an **algebraic group** denoted as: ($G$, $+$). An algebraic group has the following properties (Example with m = 7, m is known as the order of the group):
+The elements with the modulo sum operation constitutes an **algebraic group** denoted as: (G, +). An algebraic group has the following properties (Example with m = 7, m is known as the order of the group):
 
 
 * **Closure**: for any $a$ and $b$ in the set, the output of $(a + b)\%m $ must also be in the set.    
@@ -65,25 +59,25 @@ The elements with the modulo sum operation constitutes an **algebraic group** de
 4+3 (mod 6), sum=1    
 5+3 (mod 6), sum=2    
 
-* **Associativity**: for any $a$, $b$ and $c$ in the set, $((a + b)\%m + c)\%m = (a + (b + c)\%m)\%m$       
+* **Associativity**: for any $a$, $b$ and $c$ in the set, ((a + b)\%m + c)\%m = (a + (b + c)\%m)\%m       
    
-$((3+5)\%7+2)\%7 = 3 = (3+(5+2)\%7)\%7$
+((3+5)\%7+2)\%7 = 3 = (3+(5+2)\%7)\%7
 
-* **Existence of identity**: There exist an element $e$ in the set such that for any $a$ in the set $(a + e)\%m = a$     
+* **Existence of identity**: There exist an element e in the set such that for any $a$ in the set (a + e)\%m = a     
 
 $(4+0)\%7 = 4\%7 = 4$     
 In these cases, e=0, it is the identity element. 
 
-* **Inverse Element**: For any element in ($G$, $+$) $a$ there must be another element $b$ such that $(a + b)\%m = e$       
+* **Inverse Element**: For any element in (G, +) a there must be another element $b$ such that (a + b)\%m = e       
 
 m - a = b
 7 - 3 = 4
 $(3+ 4)\%7 = e = 0$
 
 
-If additionally the operation is commutative ($(a+b)\%m$=$(b+a)\%m$) then we say that the group is **commutative** or **abelian**.
+If additionally the operation is commutative ((a+b)\%m$=$(b+a)\%m) then we say that the group is **commutative** or **abelian**.
 
-$(3+2)\%7 = 5 = (2+3)\%7)$
+(3+2)\%7 = 5 = (2+3)\%7)
  
 
 ## Cyclic group
