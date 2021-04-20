@@ -18,13 +18,13 @@ Given an integer n > 1, called a modulus, two integers are said to be congruent 
 
 Congruence modulo n is a congruence relation, meaning that it is an equivalence relation that is compatible with the operations of addition, subtraction, and multiplication. Congruence modulo n is denoted:
 
-    a ≡ b ( mod n ) . {\displaystyle a\equiv b{\pmod {n}}.} {\displaystyle a\equiv b{\pmod {n}}.}
+    a ≡ b ( mod n ) 
 
-The parentheses mean that (mod n) applies to the entire equation, not just to the right-hand side (here b). This notation is not to be confused with the notation b mod n (without parentheses), which refers to the modulo operation. Indeed, b mod n denotes the unique integer a such that 0 ≤ a < n and a ≡ b ( mod n ) {\displaystyle a\equiv b\;({\text{mod}}\;n)} {\displaystyle a\equiv b\;({\text{mod}}\;n)} (i.e., the remainder of b {\displaystyle b} b when divided by n {\displaystyle n} n). 
+The parentheses mean that (mod n) applies to the entire equation, not just to the right-hand side (here b). This notation is not to be confused with the notation b mod n (without parentheses), which refers to the modulo operation. Indeed, b mod n denotes the unique integer a such that 0 ≤ a < n.
 
 The congruence relation may be rewritten as
 
-    a = k n + b , {\displaystyle a=kn+b,} {\displaystyle a=kn+b,}
+    a = k n + b 
 
 explicitly showing its relationship with Euclidean division. 
 
