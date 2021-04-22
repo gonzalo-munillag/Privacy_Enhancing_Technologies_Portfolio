@@ -9,3 +9,4 @@ Additionally, the last item of the Lesson list is the link to my capstone projec
 |[**Split Learning**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Foundations_of_Private_Computation/Split_Learning)|  
 |[**Cryptographic Ciphers Basics**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Foundations_of_Private_Computation/Cryptography_cipher_basics)|
 |[**Modular Algebra**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Foundations_of_Private_Computation/Modular_algebra)|
+|[**Practical Cryptography**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Foundations_of_Private_Computation/Practical%20cryptography)|
