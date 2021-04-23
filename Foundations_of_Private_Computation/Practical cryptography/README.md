@@ -53,11 +53,9 @@ I think they use XOR for the shift because you have a 50/50 chance of beocoming 
 
 So far, the cipher we coded pads bit by bit or, equivalently byte by byte, this is what we know as stream cipher because we generate a stream of bytes to pad the message. 
 
-In reality:  
-
 <img width="908" alt="Screenshot 2021-04-23 at 13 39 28" src="https://user-images.githubusercontent.com/57599753/115865991-5a4cb600-a439-11eb-9116-adb6891acb84.png">
 
-
+In reality, it is more complicated.
 
 
 
