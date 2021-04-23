@@ -31,6 +31,39 @@ This probability has to be smaller than e so that the scheme is (t, e) secure. R
 
 <img width="1040" alt="Screenshot 2021-04-22 at 11 43 16" src="https://user-images.githubusercontent.com/57599753/115693155-f6a28a00-a35f-11eb-97a4-9c74513cfdb1.png">
 
+<img width="1040" alt="Screenshot 2021-04-22 at 11 47 34" src="https://user-images.githubusercontent.com/57599753/115693803-8ba58300-a360-11eb-8ff2-ac0e85c00adb.png">
+
+## Linear congruential generation
+
+A linear congruential generator (LCG) is an algorithm that yields a sequence of pseudo-randomized numbers calculated with a discontinuous piecewise linear equation.
+[Source](https://en.wikipedia.org/wiki/Linear_congruential_generator)
+
+<img width="577" alt="Screenshot 2021-04-22 at 12 43 18" src="https://user-images.githubusercontent.com/57599753/115701689-53a23e00-a368-11eb-9824-2b96e9d469be.png">
+
+## Bits, bytes...
+
+There is a whole section on bity and bytes and encoding
+
+## Stream sipher
+
+Just to show:   
+We encrypt a message of N bytes into another of N bytes.
+We pad (or XOR) each byte with a secret key to get the cipher text.
+I think they use XOR for the shift because you have a 50/50 chance of beocoming 0 or 1 if tge secret key is a random sequence of bits. AND and OR gates are skewed to 75/25. Plues, XOR is complementary.
+
+So far, the cipher we coded pads bit by bit or, equivalently byte by byte, this is what we know as stream cipher because we generate a stream of bytes to pad the message. 
+
+In reality:  
+
+<img width="908" alt="Screenshot 2021-04-23 at 13 39 28" src="https://user-images.githubusercontent.com/57599753/115865991-5a4cb600-a439-11eb-9116-adb6891acb84.png">
+
+
+
+
+
+
+
+
 
 
 
