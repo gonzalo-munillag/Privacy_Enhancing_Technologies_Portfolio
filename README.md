@@ -1,6 +1,6 @@
 # Privacy-Enhancing Technologies Portfolio
 
-This repositoty contains summaries, projects, and my own thoughts about privacy-enhancing technologies.
+This repository contains projects applying privacy-enhancing technologies.
 
 ## 1. Private AI OpenMined Course
 
