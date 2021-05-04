@@ -2,7 +2,7 @@
 
 This repository contains projects applying privacy-enhancing technologies.
 
-## 1. Private AI OpenMined Course
+## 1. Private AI (OpenMined Course)
 
 This course is lead by [OpenMined](https://www.openmined.org/) and taught by many experts in the field. 
 You can also do it :), it is free! Here is the [link](https://courses.openmined.org/).
