@@ -1,7 +1,5 @@
 # Homomorphic Encryption
 
-## 1
-
 ### Lesson
 
 You have been learning about different cryptographic schemes throughout previous lessons. They mainly aim to protect confidentiality, or provide authentication. However, the ciphertexts themselves cannot be manipulated or computed on, more precisely, we cannot add two ciphertext or multiply them, which means, that anyone who wants to compute on encrypted data has to decrypt it first. This last assumption doesn't always hold, as some use cases expect the party that perform the computation to not be able to know the data he is computing on, and that's exactly what Homomorphic Encryption (HE) is trying to solve: ensuring input privacy.
@@ -125,7 +123,36 @@ Knowing the different types of schemes, it might be obvious that FHE is the idea
 
 ![Screenshot 2021-08-04 at 11 04 06](https://user-images.githubusercontent.com/57599753/128153901-f1aba5b6-2e59-4930-b0a8-c28b205d4a21.png)
 
+## Paillier Cryptosystems
 
+What is the Paillier cryptosystem?
+
+In this section you will learn about the Paillier cryptosystem, which was published in 1999. This is a partial homomorphic encryption scheme based on public key cryptography and modular arithmetic.
+
+This is an additive homomorphic cryptosystem, which basically means that we can add encrypted integers together. More specifically, the process looks like this:
+
+    Alice generates a private/public key pair.
+    Anybody can encrypt an integer under Alice’s public key, and Alice can use her private key to decrypt such ciphertexts.
+    Given Alice‘s public key and two ciphertexts, anybody can compute an encrypted output which will decrypt to the result of adding those two integers together.
+    In a similar fashion, we can also perform multiplication of an encrypted integer by a plaintext integer.
+
+In the rest of this section we will cover:
+
+    Key generation
+    Encryption and decryption (with a worked example)
+    Homomorphic addition and multiplication (with a worked example)
+    
+    
+![Screenshot 2021-08-04 at 11 07 43](https://user-images.githubusercontent.com/57599753/128154462-1a12e010-ce65-4059-8025-d33de4a0bb38.png)
+
+![Screenshot 2021-08-04 at 11 35 47](https://user-images.githubusercontent.com/57599753/128158616-8bc5f72a-83fc-40f3-8395-9f714e4df9d7.png)
+
+
+Gotchas
+
+There are a couple of special cases which need to be handled carefully. The first is multiplying by 0. Because any number to the power of 0 is 1, if we multiply a ciphertext by a plaintext 0 using the method above, the result will always be 1, and anyone who sees this "encrypted" value will know that it decrypts to 0. Luckily we can use an alternative method for this case. Multiplying any number by 0 gives 0, which means we can just skip the calculations and encrypt a 0 directly using the standard public key encryption scheme. Since encryption step introduces a random number, nobody without the private key will be able to know what the plaintext is.
+
+The other case is multiplying by 1. Because any number x to the power of 1 is x, if we multiply a ciphertext by a plaintext 1 using the normal method, the output will be the same as the input. This is less severe than the case with 0 where the encrypted value could be inferred, but still a problem because anybody who is watching the communication between whoever holds the private key and whoever is multiplying numbers will be able to work out that the number was multiplied by 0. The solution here is another workaround: instead of multiplying by 1, we perform an equivalent operation: adding 0! We just freshly encrypt a 0 and perform the usual addition procedure to obtain a secure ciphertext.
 
 
 
