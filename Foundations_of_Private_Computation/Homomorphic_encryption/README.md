@@ -154,6 +154,207 @@ There are a couple of special cases which need to be handled carefully. The firs
 
 The other case is multiplying by 1. Because any number x to the power of 1 is x, if we multiply a ciphertext by a plaintext 1 using the normal method, the output will be the same as the input. This is less severe than the case with 0 where the encrypted value could be inferred, but still a problem because anybody who is watching the communication between whoever holds the private key and whoever is multiplying numbers will be able to work out that the number was multiplied by 0. The solution here is another workaround: instead of multiplying by 1, we perform an equivalent operation: adding 0! We just freshly encrypt a 0 and perform the usual addition procedure to obtain a secure ciphertext.
 
+### The future of HE
+
+next game changers:
+
+- programmable bootstrapping 
+- bridges between different HE schemata
+- Multi-key HE: ability to combine data from different domauns!
+
+[Screenshot 2021-08-04 at 11 57 51](https://user-images.githubusercontent.com/57599753/128161949-27b0c4a4-f665-4fbf-a0b0-6618f1a4a4fa.png)
+
+![Screenshot 2021-08-04 at 11 58 31](https://user-images.githubusercontent.com/57599753/128162055-39642bbf-a83a-48a0-9e70-c68de4fc84d5.png)
+
+![Screenshot 2021-08-04 at 11 59 54](https://user-images.githubusercontent.com/57599753/128162292-d2b42e91-5cfd-48af-a2ac-eaf09682aced.png)
+
+https://numato.com/blog/differences-between-fpga-and-asics/
+
+![Screenshot 2021-08-04 at 12 03 33](https://user-images.githubusercontent.com/57599753/128162830-b3ac2442-f803-4feb-a558-4a280f647652.png)
+
+
+CKKS in a blackbox
+
+Previously, we learned about the Paillier cryptosystem, and implemented it from scratch. From now on, we will use a library called TenSEAL to perform tensor operations on encrypted data. TenSEAL provides different tensor types which relies on the CKKS scheme. So before diving into TenSEAL, we will learn about how CKKS works, without going much into the details or implementing it from scratch. If you want to learn more about CKKS, you can use these amazing resources later.
+
+![Screenshot 2021-08-04 at 11 48 07](https://user-images.githubusercontent.com/57599753/128160417-3554d1fa-5ce6-4a84-ac2e-d333e939282b.png)
+
+The CKKS scheme is mainly considered as a leveled homomorphic encryption scheme. It can encrypt messages encoded as vectors of complex numbers (thus real numbers). The size of the vector to be encrypted into a ciphertext depends on the parameters used, and is generally a power of two (e.g. 4096). So a single ciphertext will hold an entire vector of values, and operations between ciphertexts (with another ciphertext or a plaintext) are performed in an element-wise fashion. It would be our choice to either put multiple values into a ciphertext, or just a single one, but both ways imply the same computation cost. Another cool feature available in CKKS is the ability to rotate a ciphertext (to the right or left with n positions), which will be reflected as a rotation of the encrypted message vector.
+
+CKKS has a special way to deal with ciphertext's noise, it considers it as part of the error introduced during floating point arithmetic. So no bootstrapping is required in order to reduce the noise, although, it is still a leveled HE scheme due to other constraints.
+
+Computing on encrypted data doesn't always mean that we have to compute on ciphertexts only. CKKS allows for performing operations between ciphertexts, as well as ciphertexts and plaintexts.
+
+### Lesson 8: Introduction to TenSEAL
+Dashboard
+
+Homomorphic Encryption | Concept 10
+Introduction to TenSEAL
+
+TenSEAL is a tensor library, just like PyTorch or Tensorflow, however, instead of manipulating tensors that holds plain data, tensors in TenSEAL holds encrypted data using mainly the CKKS scheme.
+The Context
+
+The first object you want to create whenever you deal with TenSEAL is the context. It provides ways to control how the computation is performed, generate and holds the keys (e.g. the secret-key and public-key) required during encryption and computation.
+
+import tenseal as ts
+
+context = ts.context(ts.SCHEME_TYPE.CKKS, poly_modulus_degree=8192, coeff_mod_bit_sizes=[60, 40, 40, 60])
+
+The above line created a context for CKKS encryption, using those specific parameters. We will provide some intuition on how to choose those parameters shortly. The context creation above took care of generating keys required, and you can now get the secret-key for example.
+
+sk = context.secret_key()
+
+Intuitions for Parameter Selection in CKKS
+
+It's hard to choose the right parameters for a certain computation, but if you have some intuitions of what every parameter might be affecting, you can make some experiments using some different variants and see which works best for your use case. Below are some intuitions for choosing the parameters:
+
+    For a given security level (e.g. 128-bits security) and a polynomial modulus degree (e.g. 8192) there is an upper bound for the sum(coeff_mod_bit_sizes). If the upper bound is surpassed, there is a need to use a higher polynomial modulus degree (e.g. 16384) in order to make sure we still have the required security level.
+    The multiplicative depth is controlled by len(coeff_mod_bit_sizes) - 2. The above context provide a multiplicative depth of 2 for example. A coeff_mod_bit_sizes=[60, 40, 40, 40, 60] would have provided 3.
+    All elements of coeff_mod_bit_sizes[1: -1] should be equal in TenSEAL, since it takes care of rescaling ciphertexts. And we also want to use this same number of bits (e.g. 2 ^ 40) for the scale during encryption.
+    The scale of ciphertext (which should be equal to coeff_mod_bit_sizes[1: -1]) controls the precision of the fractional part. The bigger, the more precise.
+    The difference between coeff_mod_bit_sizes[-1] and coeff_mod_bit_sizes[-2] (or the scale) controls the precision in the integer part when all multiplication have been consumed. The bigger, the more precise.
+
+Creating Tensors
+
+Now we start creating some encrypted tensors. You can pass in any tensor-like object (it has been tested with torch and numpy), and TenSEAL would take care of encrypting it using the keys and parameters stored in the context.
+
+import numpy as np
+
+plain_tensor = np.random.randn(2, 3)
+encrypted_tensor = ts.ckks_tensor(context, plain_tensor, scale=2**40)
+encrypted_tensor
+
+You can also set the global_scale in the context so that you never need to pass the scale again and again during tensor creation.
+
+context.global_scale = 2 ** 40
+encrypted_tensor = ts.ckks_tensor(context, plain_tensor)
+print(encrypted_tensor.decrypt())
+# <tenseal.tensors.plaintensor.PlainTensor object at 0x7f391eb8d7c0>
+
+The PlainTensor object is a tensor that we mainly use internally to represent tensors with plain values. You can always call .tolist() to convert it to a list.
+
+print(encrypted_tensor.decrypt().tolist())
+# [[-0.6935322486262878, -0.1971640039349987, -0.6806255185457504], 
+#  [-0.6699472410544948, 1.3804208496159256, -0.05087860773279334]]
+
+# you can compare it to the plain tensor
+print(plain_tensor)
+# [[-0.69353225 -0.197164   -0.68062552]
+#  [-0.66994724  1.38042085 -0.05087861]]
+
+Compute on Encrypted Tensors
+
+CKKSTensor support addition, subtraction, and multiplication with scalar and tensor-like values. Let's see an example computation.
+
+encrypted_result = (encrypted_tensor + 2) * -3 - plain_tensor
+expected_result = (plain_tensor + 2) * -3 - plain_tensor
+print(encrypted_result.decrypt().tolist())
+# [[-3.2258715329047387, -5.211344710933246, -3.277498460263318],
+#  [-3.320211576555451, -11.521684756232458, -5.796486356321944]]
+
+print(expected_result)
+# [[ -3.22587101  -5.21134399  -3.27749793]
+#  [ -3.32021105 -11.52168339  -5.79648557]]
+
+We can also make dot operations!
+
+# inner product
+vec1 = np.random.randn(5)
+vec2 = np.random.randn(5)
+enc_vec1 = ts.ckks_tensor(context, vec1)
+enc_vec2 = ts.ckks_tensor(context, vec2)
+print("result:", enc_vec1.dot(enc_vec2).decrypt().tolist())
+print("expected:", vec1.dot(vec2))
+
+# result: 0.2651245105129444
+# expected: 0.2651244888032714
+
+Batched computation
+
+We previously discussed in the CKKS concept that a single ciphertext can hold multiple values (a vector of values), without affecting the computation or memory costs. However, we didn't use that feature so far. So now, we are going to use this capability to compute on a batch of matrices at the same time.
+
+# a single ciphertext can hold up to `poly_modulus_degree / 2` values
+# so let's use all the slots available
+batch_size = 8192 // 2 #  4096
+mat1 = np.random.randn(batch_size, 2, 3)
+mat2 = np.random.randn(3, 4)
+# batch is by default set to False, we have to turn it on to use the packing feature of ciphertexts
+enc_mat1 = ts.ckks_tensor(context, mat1, batch=True)
+enc_mat2 = ts.ckks_tensor(context, mat2)
+# let's just compare the first result matrix in the batch
+print("result:", enc_mat1.dot(enc_mat2).decrypt().tolist()[0])
+print("expected:", mat1.dot(mat2)[0])
+
+# result: [[1.871707310741, -1.64646640599, 0.907704175882, 1.041594801418], 
+#          [-1.568004632635, 1.12713712214, -1.687649218268, -0.580647184131]]
+# expected: [[ 1.87170707 -1.64646619  0.90770405  1.04159466]
+#            [-1.56800442  1.12713697 -1.68764899 -0.58064711]]
+
+More Details
+
+This section provides more details about the library and how some things happens under the hood.
+Parallel Computation
+
+TenSEAL takes advantage of parallel computation whenever possible. It uses by default the maximum number of threads the system can run in parallel, but someone can specify that during context creation.
+
+non_parallel_context = ts.context(
+    ts.SCHEME_TYPE.CKKS,
+    poly_modulus_degree=8192,
+    coeff_mod_bit_sizes=[60, 40, 40, 60],
+    n_threads=1,
+)
+
+Decryption
+
+You might have been wondering how is decryption not requiring a secret-key? But it's just because the context by default holds all the keys, and is considered a private asset. If you want to make it public, then you just call make_context_public(). Make sure you save the secret-key somewhere before that to use it later for decryption.
+
+sk = context.secret_key()
+context.make_context_public()
+
+# now let's try decryption
+enc_mat1.decrypt()
+# raises ValueError: the current context of the tensor doesn't hold a secret_key, please provide one as argument
+
+# now we need to explicitly pass the secret-key
+enc_mat1.decrypt(sk)
+# returns <tenseal.tensors.plaintensor.PlainTensor at 0x7f391eb8dc70>
+
+You should always make a context public before sending it to other parties to compute on encrypted data.
+Serialization
+
+Speaking of sending the context and encrypted data, can we serialize these objects? And the answer is yes! There is a serialize method for every serializable object, like the context and tensors. Although, tensors have a slightly different ways of being loaded, let's see through an example.
+
+ser_context = context.serialize()
+type(ser_context)
+# bytes
+
+ser_tensor = encrypted_tensor.serialize()
+type(ser_tensor)
+# bytes
+
+loaded_context = ts.context_from(ser_context)
+loaded_context
+# <tenseal.enc_context.Context at 0x7f391eb8dfa0>
+
+As tensors always require to be linked to a context, we need to know which context to link the tensor to during deserialization.
+
+loaded_enc_tensor = ts.ckks_tensor_from(loaded_context, ser_tensor)
+
+However, there is also a way to do it the lazy way, deserializing, then linking it to a specific context.
+
+lazy_loaded_enc_tensor = ts.lazy_ckks_tensor_from(ser_tensor)
+# try to operate on a tensor that in not linked to a context yet
+lazy_loaded_enc_tensor + 5
+# raises ValueError: missing context
+
+# You have to first link it
+lazy_loaded_enc_tensor.link_context(loaded_context)
+lazy_loaded_enc_tensor + 5
+# returns <tenseal.tensors.ckkstensor.CKKSTensor at 0x7f391eb8d1f0>
+
+Now we can plug all these features with a system that can pass data between parties and we can do encrypted machine learning inference, where one party encrypts its data and send it to another party that do the inference while data stays encrypted, then send back the encrypted result. The initial party can then use the secret-key to decrypt the result. And fortunately, we already have Duet in PySyft to do this!
+
+
 
 
 
