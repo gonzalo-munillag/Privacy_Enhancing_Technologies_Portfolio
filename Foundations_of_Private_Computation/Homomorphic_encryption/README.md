@@ -54,14 +54,16 @@ HE schemata have 5 main characteristics:
 
 1. Security
 2. How effciently can it be implemented?
-Out of scope
+Out of scope (1-2)
+3. Noise management
 
-3. Symmetric vs asymmetric
+
+4. Symmetric vs asymmetric
 
 HE asymmetric - 2 pk (encryption and evaluation) and 1 sk
 HE symmetric . 1 pk (evaluation) and 1 sk
 
-4. Circuits that it can evaluate
+5. Circuits that it can evaluate
 
 These schemata are equivalent for HE (not in conventional encryption), one can build on the other. Many schemata have been conceived as symmetric, they create a pk from the sk.
 
@@ -117,7 +119,14 @@ Machine Learning and the Different Types
 
 Knowing the different types of schemes, it might be obvious that FHE is the ideal type in terms of possible computations. However, using this type of schemes can introduce a high overhead compared to SHE and PHE. Machine learning models generally require both addition and multiplication during evaluation, which makes PHE non trivial to use in this context. SHE and FHE both provide those operations, but with different properties. SHE and LHE have been the first choice for ML applications due to their practicability compared to FHE, but this had a direct impact on the kind of ML models used. SHE can't evaluate arbitrarily deep models as promised by FHE, but have been more practical for years due to the fact that the bootstrapping in FHE schemes, was taking minutes to be executed. In contrast, ML evaluation using SHE, was taking seconds. A lot of work has been done since then to improve FHE schemes, and we have started seeing FHE used for evaluating models with more than 20 layers.
 
-5. Noise management
+![Screenshot 2021-08-04 at 11 02 08](https://user-images.githubusercontent.com/57599753/128153580-d7d71c4c-857e-4b99-b700-611644c57620.png)
+
+![Screenshot 2021-08-04 at 11 03 44](https://user-images.githubusercontent.com/57599753/128153828-5899e65d-bd5f-49cb-8d07-15918a07e2bc.png)
+
+![Screenshot 2021-08-04 at 11 04 06](https://user-images.githubusercontent.com/57599753/128153901-f1aba5b6-2e59-4930-b0a8-c28b205d4a21.png)
+
+
+
 
 
 
