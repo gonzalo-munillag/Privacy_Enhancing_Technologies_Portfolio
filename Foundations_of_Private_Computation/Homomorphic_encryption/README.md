@@ -48,7 +48,45 @@ A ML can be decomoswed in a sequence of H operations.
 
 In comparison to SMC, HE does not require a complex deployment. HE only adds a layer of encryprtion. No change on the service architecture.
 
+## 2
 
+HE schemata have 5 main characteristics:
+
+1. Security
+2. How effciently can it be implemented?
+Out of scope
+
+3. Symmetric vs asymmetric
+
+HE asymmetric - 2 pk (encryption and evaluation) and 1 sk
+HE symmetric . 1 pk (evaluation) and 1 sk
+
+These schemata are equivalent for HE (not in conventional encryption), one can build on the other. Many schemata have been conceived as symmetric, they create a pk from the sk.
+
+![Screenshot 2021-08-04 at 10 31 49](https://user-images.githubusercontent.com/57599753/128149175-66370feb-54f1-4381-8319-ce44585ecb77.png)
+
+![Screenshot 2021-08-04 at 10 33 05](https://user-images.githubusercontent.com/57599753/128149346-0824e34f-3bfd-47d6-ac4f-8e84c3ee6e57.png)
+
+![Screenshot 2021-08-04 at 10 33 58](https://user-images.githubusercontent.com/57599753/128149470-8be3061d-af5d-4c7a-a447-da95563a2e96.png)
+
+![Screenshot 2021-08-04 at 10 35 43](https://user-images.githubusercontent.com/57599753/128149741-86f65c08-d306-4960-92fb-93f2f9446bd6.png)
+
+![Screenshot 2021-08-04 at 10 36 35](https://user-images.githubusercontent.com/57599753/128149873-f3ab2dc0-1fdd-4cf0-9583-eb0a7b0c61a9.png)
+
+![Screenshot 2021-08-04 at 10 42 25](https://user-images.githubusercontent.com/57599753/128150687-8177c609-1ca7-47ac-9fa0-63293ff3ddf3.png)
+
+FHE - Does not limit the depth of the circuit. They so not require to know the circuit in advance. The circuit can be determined at running time. No limit on the number of homomorphic operations. Everything happens as in the plaintext world, but values are encrypted.
+
+SHE - impose limitations on the topology of the circuit or the circuit needs to be given in advance. 
+
+Leveled HE need noise. Tightly predicts how the level of noise evolves. They have a bootstrapping capability, but it is so inefficient that is not used, limiting thee scheme to SHE. If bootstrapping is used, then FHE.
+
+
+
+4. Circuits that it can evaluate
+
+
+5. Noise management
 
 
 
