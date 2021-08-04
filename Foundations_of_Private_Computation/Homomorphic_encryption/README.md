@@ -61,6 +61,8 @@ Out of scope
 HE asymmetric - 2 pk (encryption and evaluation) and 1 sk
 HE symmetric . 1 pk (evaluation) and 1 sk
 
+4. Circuits that it can evaluate
+
 These schemata are equivalent for HE (not in conventional encryption), one can build on the other. Many schemata have been conceived as symmetric, they create a pk from the sk.
 
 ![Screenshot 2021-08-04 at 10 31 49](https://user-images.githubusercontent.com/57599753/128149175-66370feb-54f1-4381-8319-ce44585ecb77.png)
@@ -81,10 +83,39 @@ SHE - impose limitations on the topology of the circuit or the circuit needs to 
 
 Leveled HE need noise. Tightly predicts how the level of noise evolves. They have a bootstrapping capability, but it is so inefficient that is not used, limiting thee scheme to SHE. If bootstrapping is used, then FHE.
 
+HE schemes are classified into three main types, depending on the possible operations you can compute on encrypted data, and how many operation can be chained on a ciphertext, while still being able to decrypt it to the correct value. We first define what a circuit is, then discuss the 3 types of HE schemes, namely, partially, somewhat and fully homomorphic encryption.
 
+A circuit is a way to represent a function f() as a directed acyclic graph. It is composed of inputs, gates (e.g. boolean or arithmetic gates), edges connecting those gates, and a final output. Inputs will flow through the graph to compute the final output. When doing HE, we often use the multiply and add gates with two inputs. Circuits have two properties of interest, namely, size and depth. The size is the number of gates a circuit has, it impacts directly the computation needed to evaluate the circuit. The depth is the largest distance between every input and the output, this number is very important for HE schemes as it represent the maximum number of operations we need to chain on a ciphertext to evaluate the circuit. Figure 1 shows a circuit of a function f(x, y) = x · y + 3x. This circuit has a size of 3 and a depth of 2.
 
-4. Circuits that it can evaluate
+![Screenshot 2021-08-04 at 10 55 15](https://user-images.githubusercontent.com/57599753/128152593-608b4875-b492-43d4-b0ef-d8d6455e182c.png)
 
+PHE:
+
+This type of schemes can evaluate any circuit composed of a single type of gate, addition or multiplication. It does not restrict the size or the depth of the circuit. This type is not sufficient for many use cases, especially deep learning. The Paillier cryptosystem, which we will study later in this lesson, is an example of a PHE that allows an unbounded number of modular additions.
+
+![Screenshot 2021-08-04 at 10 47 19](https://user-images.githubusercontent.com/57599753/128151379-8f63bee4-fe6b-4524-95bc-ed024f8ec612.png)
+
+They only support one unique type of operation, eg addition. And one single operation. 
+
+SHE
+
+This type of schemes can evaluate circuits composed of both addition and multiplication gates, but with a maximum depth $d$. Leveled Homomorphic Encryption (LHE) is a subset of SHE, it can evaluate circuits with variable depth, but the depth must be set prior to encryption (during parameter selection). BGN is an example SHE scheme that can evaluate a single multiplication on encrypted data. SHE is useful for evaluating low degree polynomials up to some level, however, we sometimes need to evaluate circuits of arbitrary depth, and that's where we will need FHE. (SHE cannot multiply twice)
+
+![Screenshot 2021-08-04 at 10 48 48](https://user-images.githubusercontent.com/57599753/128151622-98cf3bb1-6ca5-4398-a3c8-d6a2bdfd7666.png)
+
+Leveled HE (LHE)
+
+![Screenshot 2021-08-04 at 10 49 47](https://user-images.githubusercontent.com/57599753/128151773-b858f3ed-0ad4-4383-82de-2ae6668fe31f.png)
+
+FHE
+
+FHE schemes can evaluate circuits composed of both addition and multiplication gate, but in contrast to SHE, FHE has an unlimited circuit depth, which makes it suitable for deep learning applications. Although many FHE schemes have been proposed, it has been difficult to use them in practice. An example of this kind of schemes is BFV.
+
+![Screenshot 2021-08-04 at 10 52 30](https://user-images.githubusercontent.com/57599753/128152190-05b9edf4-5108-4abc-bea9-301d388120dc.png)
+
+Machine Learning and the Different Types
+
+Knowing the different types of schemes, it might be obvious that FHE is the ideal type in terms of possible computations. However, using this type of schemes can introduce a high overhead compared to SHE and PHE. Machine learning models generally require both addition and multiplication during evaluation, which makes PHE non trivial to use in this context. SHE and FHE both provide those operations, but with different properties. SHE and LHE have been the first choice for ML applications due to their practicability compared to FHE, but this had a direct impact on the kind of ML models used. SHE can't evaluate arbitrarily deep models as promised by FHE, but have been more practical for years due to the fact that the bootstrapping in FHE schemes, was taking minutes to be executed. In contrast, ML evaluation using SHE, was taking seconds. A lot of work has been done since then to improve FHE schemes, and we have started seeing FHE used for evaluating models with more than 20 layers.
 
 5. Noise management
 
