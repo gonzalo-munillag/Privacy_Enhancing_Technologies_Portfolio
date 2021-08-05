@@ -12,3 +12,6 @@ Additionally, the last item of the Lesson list is the link to my capstone projec
 |[**Practical Cryptography**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Foundations_of_Private_Computation/Practical%20cryptography)|
 |[**Block ciphers and AES**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Foundations_of_Private_Computation/Block_ciphers_and_AES)|
 |[**Asymmetric Cryptographic Systems**](https://github.com/gonzalo-munillag/Private_AI_OpenMined/tree/main/Foundations_of_Private_Computation/Asymmetric_Cryptographic_Systems)|
+|[**Homomorphic Encryption**](https://github.com/gonzalo-munillag/Privacy_Enhancing_Technologies_Portfolio/tree/main/Foundations_of_Private_Computation/Homomorphic_encryption)|
+|[**Secure Multiparty Computation**](https://github.com/gonzalo-munillag/Privacy_Enhancing_Technologies_Portfolio/tree/main/Foundations_of_Private_Computation/Secure_multiparty_computation)|
+|[**Public Key Infrastructure**](https://github.com/gonzalo-munillag/Privacy_Enhancing_Technologies_Portfolio/tree/main/Foundations_of_Private_Computation/Public_key_Infrastructure)|
